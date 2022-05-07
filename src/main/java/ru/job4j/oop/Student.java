@@ -1,6 +1,4 @@
-package ru.job4j.tracker.oop;
-
-import java.sql.SQLOutput;
+package ru.job4j.oop;
 
 public class Student {
 
