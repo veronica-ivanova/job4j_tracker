@@ -3,7 +3,7 @@ package ru.job4j.poly;
 public class Service {
     private Store store;
 
-    public Service(DbStore store) {
+    public Service(Store store) {
         this.store = store;
     }
 
