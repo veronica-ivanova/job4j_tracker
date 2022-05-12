@@ -28,7 +28,20 @@ public class StartUI {
                     System.out.println("Хранилище еще не заполнено");
                 }
 
-            } else if (select == 6) {
+            } else if (select == 2) {
+                System.out.println("=== Edit item ===");
+                System.out.println("Enter id: ");
+                int id = Integer.parseInt(scanner.nextLine());
+                System.out.println("Enter name: ");
+                String name = scanner.nextLine();
+                Item item = new Item(name);
+                if (tracker.replace(id, item)) {
+                    System.out.println("Заявка заменена успешно");
+                } else {
+                    System.out.println("Ошибка замены заявки");
+                }
+            }
+            else if (select == 6) {
                 run = false;
             }
         }
