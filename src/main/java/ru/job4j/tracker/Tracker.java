@@ -76,22 +76,4 @@ public class Tracker {
         }
         return result;
     }
-
-
-//    public static void main(String[] args) {
-//        Tracker tracker = new Tracker();
-//        Item item = new Item("1");
-//        Item item2 = new Item("2");
-//        Item item3 = new Item("3");
-//
-//        tracker.add(item);
-//        tracker.add(item2);
-//        tracker.add(item3);
-//        Item[] ar1 = tracker.findAll();
-//        Item[] ar2 = new Item[10];
-//        tracker.findByName("2");
-//        for (int i = 0; i < tracker.items.length; i++) {
-//            System.out.println(tracker.items[i].getName());
-//        }
-//    }
 }
