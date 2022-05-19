@@ -1,10 +1,10 @@
 package ru.job4j.tracker;
 
-public class FindByName implements UserAction {
+public class FindNameAction implements UserAction {
 
     private final Output out;
 
-    public FindByName(Output out) {
+    public FindNameAction(Output out) {
         this.out = out;
     }
     @Override

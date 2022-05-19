@@ -1,9 +1,9 @@
 package ru.job4j.tracker;
 
-public class EditItem implements UserAction{
+public class EditAction implements UserAction{
     private final Output out;
 
-    public EditItem(Output out) {
+    public EditAction(Output out) {
         this.out = out;
     }
     @Override
