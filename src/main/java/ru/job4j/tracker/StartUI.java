@@ -30,9 +30,9 @@ public class StartUI {
                 new ShowAllAction(output),
                 new EditAction(output),
                 new DeleteAction(output),
-                new FindIdAction(output),
-                new FindNameAction(output),
-                new Exit(output)
+                new FindByIdAction(output),
+                new FindByNameAction(output),
+                new Exit()
         };
         new StartUI(output).init(input, tracker, actions);
     }
