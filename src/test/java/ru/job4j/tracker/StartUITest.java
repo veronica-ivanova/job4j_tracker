@@ -1,5 +1,6 @@
 package ru.job4j.tracker;
 
+import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import java.time.format.DateTimeFormatter;
@@ -7,6 +8,7 @@ import java.time.format.DateTimeFormatter;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.MatcherAssert.*;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertThat;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -186,5 +188,26 @@ public class StartUITest  {
                         + "0. Find by Id" + ln
                         + "1. Exit" + ln
         ));
+    }
+    @Test
+    public void whenInvalidExit() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"1", "0"}
+        );
+        Tracker tracker = new Tracker();
+        UserAction[] actions = new UserAction[]{
+                new Exit()
+        };
+        new StartUI(out).init(in, tracker, actions);
+        String ln = System.lineSeparator();
+        assertThat(out.toString(), Matchers.is(
+                        "Menu:" + ln
+                                + "0. Exit" + ln
+                                + "Wrong input, you can select: 0..0" + ln
+                                + "Menu:" + ln
+                                + "0. Exit" + ln
+                )
+        );
     }
 }
