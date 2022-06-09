@@ -5,7 +5,7 @@ public class Airport {
         final Airbus airbus = new Airbus("A320");
         System.out.println(airbus);
         airbus.printModel();
-        airbus.printCountEngine(airbus);
+        airbus.printCountEngine();
 
 //        airbus = new Airbus("A380");
 //        System.out.println(airbus);
@@ -13,6 +13,6 @@ public class Airport {
         airbus.setName("A380");
         System.out.println(airbus);
         airbus.printModel();
-        airbus.printCountEngine(airbus);
+        airbus.printCountEngine();
     }
 }
